@@ -1,0 +1,31 @@
+{
+	"name": "create-block/carkeek-acf-random",
+	"version": "0.1.0",
+	"title": "Random Images Block (ACF)",
+	"category": "widgets",
+	"icon": "format-gallery",
+	"description": "Random image block.",
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "random-image.php"
+	},
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"color": true,
+		"customClassName": true,
+		"jsx": true
+	},
+	"keywords": [ "images", "random" ],
+	"textdomain": "carkeek-acf-random",
+	"style": "file:./style.css",
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"_is_preview": "true"
+			}
+		}
+	}
+}
+
