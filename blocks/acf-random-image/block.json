@@ -10,7 +10,7 @@
 		"renderTemplate": "random-image.php"
 	},
 	"supports": {
-		"align": false,
+		"align": ["wide", "full"],
 		"anchor": true,
 		"color": true,
 		"customClassName": true,

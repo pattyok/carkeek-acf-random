@@ -17,7 +17,7 @@ if ( ! empty( $block['anchor'] ) ) {
 
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'wp-block-random';
+$class_name = 'wp-block-carkeek-acf-random';
 if ( ! empty( $block['className'] ) ) {
 	$class_name .= ' ' . $block['className'];
 }
@@ -33,27 +33,15 @@ if ( empty( $images ) ) {
 $rand   = array_rand( $images, 1 );
 
 ?>
-<div id="<?php echo esc_attr( $block_id ); ?>" class="page-header has-image-opacity has-post-thumbnail <?php echo esc_attr( $class_name ); ?>">
+<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
 
-<div class="post-thumbnail">
-		<?php
-			echo wp_get_attachment_image( $images[ $rand ]['image'], 'full' );
-		?>
-	 <?php if ( ! empty( $images[ $rand ]['headline'] ) ) { ?>
-
-		<div class="entry-title"><h1>
-			<?php
-			echo wp_kses_post( $images[ $rand ]['headline'] );
-			?>
-			</h1>
-		</div>
-	<?php } ?>
-</div>
-		<?php $caption = wp_get_attachment_caption( $images[ $rand ]['image'] ); ?>
-		<?php if ( ! empty( $caption ) ) { ?>
-		<div class="image-caption"><?php echo esc_html( $caption ); ?></div>
-		<?php } ?>
-		<div class="page-header-inner">
+	
+	<?php
+		echo wp_get_attachment_image( $images[ $rand ]['image'], 'full' );
+	?>
+	
+		
+	<div class="image-inner">
 		<InnerBlocks />
 	</div>
 
