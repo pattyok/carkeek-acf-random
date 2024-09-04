@@ -21,14 +21,3 @@
     flex-direction: column;
 }
 
-
-.wp-block-create-block-carkeek-acf-random.has-child-selected .acf-random-image__image,
-.wp-block-create-block-carkeek-acf-random.is-selected .acf-random-image__image {
-    position: relative;
-}
-
-.wp-block-create-block-carkeek-acf-random.has-child-selected .acf-random-image__innerblocks,
-.wp-block-create-block-carkeek-acf-random.is-selected .acf-random-image__innerblocks {
-    display: block;
-    height: auto;
-}
