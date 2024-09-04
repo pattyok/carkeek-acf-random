@@ -16,33 +16,51 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 
-// Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'wp-block-carkeek-acf-random';
-if ( ! empty( $block['className'] ) ) {
-	$class_name .= ' ' . $block['className'];
-}
-if ( ! empty( $block['align'] ) ) {
-	$class_name .= ' align' . $block['align'];
-}
 
 // Load values and assign defaults.
 $images = get_field( 'block_random_images' );
 if ( empty( $images ) ) {
 	return;
 }
-$rand   = array_rand( $images, 1 );
+$rand = array_rand( $images, 1 );
 
+$inner_blocks_template = array(
+	array(
+		'core/group',
+		array(),
+		array(
+			array(
+				'core/heading',
+				array(
+					'level' => 2,
+				),
+			),
+		),
+	),
+);
 ?>
-<div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?>">
+
+<?php if ( ! $is_preview ) { ?>
+	<div
+		<?php
+		echo wp_kses_data(
+			get_block_wrapper_attributes()
+		);
+		?>
+	>
+<?php } ?>
+
 
 	
 	<?php
-		echo wp_get_attachment_image( $images[ $rand ]['image'], 'full' );
+		echo wp_get_attachment_image( $images[ $rand ]['image'], 'full', false, array( 'class' => 'acf-random-image__image' ) );
 	?>
 	
-		
-	<div class="image-inner">
-		<InnerBlocks />
-	</div>
+	<InnerBlocks 
+		class="acf-random-image__innerblocks"
+		template="<?php echo esc_attr( wp_json_encode( $inner_blocks_template ) ); ?>"
+	/>
 
-</div>
+	<?php if ( ! $is_preview ) { ?>
+	</div>
+<?php } ?>

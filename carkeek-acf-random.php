@@ -8,7 +8,7 @@
  * Primary Branch: main
  * Description: Custom block to display a random image from a given set of images.
  * Author: Patty O'Hara
- * Version: 0.0.02
+ * Version: 0.0.03
  * Author URI https://carkeekstudios.com/
  * Text Domain: carkeek-blocks
  */
@@ -122,7 +122,6 @@ if ( ! class_exists( 'CarkeekACFRandom' ) ) :
 		private function includes() {
 
 			require_once CARKEEKACFRANDOM_PLUGIN_DIR . 'includes/class-carkeekacfrandom-register.php'; // phpcs:ignore
-
 		}
 
 		/**
@@ -188,7 +187,6 @@ if ( ! class_exists( 'CarkeekACFRandom' ) ) :
 				wp_set_script_translations( 'carkeekblocks-editor', 'carkeekblocks' );
 			}
 		}
-
 	}
 
 endif;

@@ -10,13 +10,19 @@
 		"renderTemplate": "random-image.php"
 	},
 	"supports": {
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"anchor": true,
 		"color": true,
 		"customClassName": true,
 		"jsx": true
 	},
-	"keywords": [ "images", "random" ],
+	"keywords": [
+		"images",
+		"random"
+	],
 	"textdomain": "carkeek-acf-random",
 	"style": "file:./style.css",
 	"example": {
@@ -28,4 +34,3 @@
 		}
 	}
 }
-
