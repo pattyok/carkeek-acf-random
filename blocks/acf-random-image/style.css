@@ -12,6 +12,16 @@
     bottom: 0;
     object-fit: cover;
 }
+.wp-block-create-block-carkeek-acf-random .acf-random-image__headline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1em;
+}
 .acf-random-image__innerblocks {
     position: relative; 
     display: flex;
