@@ -8,7 +8,7 @@
  * Primary Branch: main
  * Description: Custom block to display a random image from a given set of images.
  * Author: Patty O'Hara
- * Version: 0.0.03
+ * Version: 0.0.04
  * Author URI https://carkeekstudios.com/
  * Text Domain: carkeek-blocks
  */
