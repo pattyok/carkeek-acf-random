@@ -28,14 +28,7 @@ $inner_blocks_template = array(
 	array(
 		'core/group',
 		array(),
-		array(
-			array(
-				'core/heading',
-				array(
-					'level' => 2,
-				),
-			),
-		),
+		array(),
 	),
 );
 ?>
@@ -54,6 +47,10 @@ $inner_blocks_template = array(
 	
 	<?php
 		echo wp_get_attachment_image( $images[ $rand ]['image'], 'full', false, array( 'class' => 'acf-random-image__image' ) );
+		$headline = $images[ $rand ]['headline'];
+	if ( ! empty( $headline ) ) {
+		echo '<h1 class="acf-random-image__headline">' . esc_html( $headline ) . '</h1>';
+	}
 	?>
 	
 	<InnerBlocks 

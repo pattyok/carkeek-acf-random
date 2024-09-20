@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -49,6 +49,27 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "parent_repeater": "field_66b29cf9ba983"
+                },
+                {
+                    "key": "field_66edb84485e8b",
+                    "label": "Headline",
+                    "name": "headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66b29cf9ba983"
                 }
             ]
         }
@@ -71,5 +92,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723000748
+    "modified": 1726855759
 }
